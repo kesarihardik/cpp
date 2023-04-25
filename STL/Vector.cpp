@@ -23,18 +23,21 @@ int main(){
 
     cout<<v.size()<<endl;
     cout<<v.back()<<endl;
+    cout<<v.front()<<endl;
 
-    v.clear();               //v.erase(v.begin(),v.end())
+ 
 
 
-//insert at
-    vector<int> v2(2,100);
+//insert 
+    vector<int> v2(2,100);   
     v2.insert(v2.begin(),30);
-    v2.insert(v2.end(),v2.begin(),v2.end());
+    v2.insert(v2.end(),v.begin(),v.end());
 
     for(auto it : v2)
     cout<<it<< " ";
     cout<<endl;
 
+   v.clear();               //v.erase(v.begin(),v.end())
 
+   return 0;
 }

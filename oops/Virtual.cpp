@@ -7,6 +7,9 @@ using namespace std;
 //needs to be defined in base class. redefining optional.
 //In Java , appropriate method is called accordingly
 
+//assuming fun is present in both Parent & child
+//Parent P = new Child();    P.fun();         ///java will call fun of child class.
+//Parent* P = new Child() ;  P.fun();           //c++ will invoke parent class fun
 
 class Feline{
     public:
@@ -48,7 +51,7 @@ void makeSound(Feline* feline){             //virutal helps us to make generic m
 }
 
 int main(){
- Feline *feline = new Feline;
+ Feline* feline = new Feline;
  feline->eat();
 
  Cat* cat = new Cat;
@@ -63,3 +66,4 @@ int main(){
 
 return 0;                        
 }
+

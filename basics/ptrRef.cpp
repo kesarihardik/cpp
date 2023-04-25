@@ -15,5 +15,8 @@ int main(){
 
   cout<<"\nMemory address : "<<ptr_x<< "| Value : "<<*ptr_x;  
   cout<<"\nMemory address : "<<ptr_y<< "| Value : "<<*ptr_y;    
- return 0;
+  
+  delete ptr_x;          
+  delete ptr_y;
+  return 0;
 }

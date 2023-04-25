@@ -41,10 +41,19 @@ class Dog{
 
 int main(){
     Dog* d1 = new Dog();                              //new keyword returns reference
-    Dog d2("Preeti",5);  
+    Dog d2("Preeti",5);                                  
     // cout<< d2.getAge()<<endl;
 
     Dog d3 = d2;                               //Unlike java, c++ has default copy constructor
     cout<<"\n"<<d3.getName()<<"\t"<<d3.getAge()<<endl;
+
+    delete d1;
+    
    return 0;
 }
+
+// C++ vs Java. 
+//new returns a pointer in c++. IN java new returns a type that can be binded to variable.
+//IN Java we have references to object. Hence we use Dog D1 = new Dog(); D1 is reference.
+// IN java obj is created always in heap.
+//IN C++, we can create object in stack also. Dog D1();

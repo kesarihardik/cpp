@@ -4,7 +4,8 @@ using namespace std;
 
 int main(){
   pair<int,int> p = {1,2};
-
+  pair<int,int> p2 = make_pair(2,3);
+  
   cout<<p.first<<"  "<<p.second<<endl; 
 
   pair<int, pair<int,int>> p2 = {13,{11,12}};
