@@ -3,9 +3,21 @@
 using namespace std;
 
 int main(){
-    cout<<"Hello World"<<endl;
+    int i = 3;
+    cout<<i/2<<endl;
+    cout<<i/2.0<<endl;
 
-    char a = 97;  
-    int i = 'c';
-    cout<<i<<"\t"<<a;
+    float f = i;
+    cout<<f<<endl;
+
+    i=3.242;
+    cout<<i<<endl;
+
+    //int to char
+    char ch = 97;   //(char)97
+    cout<<ch<<endl;
+
+    //chat to int
+    int n = ch ;
+    cout<<n<<" "<<ch<<endl;
 }

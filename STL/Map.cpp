@@ -1,6 +1,5 @@
 #include<iostream>
 #include<unordered_map>
-#include <bits/stdc++.h>
 using namespace std;
 
 //map - stores key-value pair
@@ -16,17 +15,18 @@ int main(){
   mp.insert({4,16});
 
    // traversal
-  for(unordered_map<int,int> :: iterator itr = mp.begin();itr!= mp.end();itr++)
-    cout<<(*itr).first<<" "<<itr->second<<endl;
+  // for(unordered_map<int,int> :: iterator itr = mp.begin();itr!= mp.end();itr++)
+  //   cout<<(*itr).first<<" "<<itr->second<<endl;
   
-//    for(auto& it : mp)   cout<<it.first<<" "<<it.second<<endl;
+   for(auto& it : mp)   cout<<it.first<<" "<<it.second<<endl;
   
 // size and count
   cout<<mp.size()<<endl;
   cout<<"count "<<mp.count(1)<<endl;
 
   //find
-  if(mp.find(3)!=mp.end()) cout<<"3 present."<<endl;
+  if(mp.find(3)!=mp.end()) 
+    cout<<"3 present."<<endl;
 
    //copy
    unordered_map<int,int> mp2(mp);      //copy constructor
