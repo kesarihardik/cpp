@@ -5,7 +5,9 @@ using namespace std;
 //helps to avoid diamond problem.
 //can be accessed through pointers. can be friends.
 //needs to be defined in base class. redefining optional.
-//In Java , appropriate method is called accordingly
+
+//c++ uses static dispatch(resolves method at compile time)
+//In Java , all instance methods are virtual by default. Java uses dynamic dispatch.
 
 //assuming fun is present in both Parent & child
 //Parent P = new Child();    P.fun();         ///java will call fun of child class.
@@ -17,31 +19,30 @@ class Feline{
         cout<<"I'm eating generic food."<<endl;
       }
 
-      virtual void sound(){
+      void virtual sound(){    //virtual placed after return type not recommended thought it works.
         cout<<"I make sound."<<endl;
       }
 };
 
 class Cat: public Feline{
     public:
-      void eat(){
+      void eat() override{             //override keyword is optional. gives compiler an indication for compile time check.
         cout<<"I'm eating Rat."<<endl;
       }
 
-      
-       void sound(){
+      void sound() override{
         cout<<"I meow."<<endl;
       }
 };
 
 class Tiger: public Feline{
     public:
-     void eat(){
+     void eat() override{
         cout<<"I'm eating Deer."<<endl;
      }
 
      
-     void sound(){
+     void sound() override{
         cout<<"I roar."<<endl;
       }
 };

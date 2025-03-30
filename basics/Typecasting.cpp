@@ -17,7 +17,7 @@ int main(){
     char ch = 97;   //(char)97
     cout<<ch<<endl;
 
-    //chat to int
+    //char to int
     int n = ch ;
     cout<<n<<" "<<ch<<endl;
 }

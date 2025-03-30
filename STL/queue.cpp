@@ -7,7 +7,7 @@ int main(){
   // q.push(12);
   // q.pop();
 
-  // queue<int> tmp(q);
+  // queue<int> tmp(q);         //copy constructor
   // while(!tmp.empty()){
   //   cout<<tmp.front()<<endl;
   //   tmp.pop();

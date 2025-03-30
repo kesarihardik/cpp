@@ -24,13 +24,11 @@ for( unordered_set<char>::iterator it = vowels.begin(); it !=vowels.end();it++){
 }
 cout<<endl;
 
-
 //check if present
 if(vowels.find('i') != vowels.end()) cout<<"i is present."<<endl;
 
-//erase and clear. 
 //vowels.erase(vowels.begin(),vowels.find('i'));     // bigger limit not inclusive //use this with sorted set only
-vowels.erase('i');
+vowels.erase('i');          //erase by value
 
 cout<<"size: "<<vowels.size();
 for(auto i : vowels){

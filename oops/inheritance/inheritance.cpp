@@ -1,9 +1,12 @@
 #include<iostream>
 using namespace std;
 
-//inheritance - is a relationship
+//inheritance - is a relationship. types - single, multilevel, multiple, hierarchical, hybrid
+//mode of inheritance: c++ allows to change access level while inheriting.
 // derivation can be public , private or protected. by default: private
+
 //base class constructor is called first when creating object of child class.
+//private field/ methods are not inherited.
 
 class Shape{
    public:  

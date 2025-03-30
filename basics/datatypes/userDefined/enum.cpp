@@ -3,15 +3,15 @@ using namespace std;
 
 //enum is user defined data types that consists of integral constants.
 
-enum vowels { a, e, i , o , u};
+enum vowel { a, e, i , o , u};
 enum season {spring = 100, summer = 30 , winter = 50};
 
 int main(){
-  vowels v = a;
-  cout<<v <<endl;
+  vowel v = a;
+  cout<<v <<" "<<sizeof(v) <<endl;
   
   season s = summer;
-  cout<<s<<endl;
+  cout<<s<<" "<<sizeof(s)<<endl;
 
   return 0; 
 }

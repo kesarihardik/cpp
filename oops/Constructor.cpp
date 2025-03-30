@@ -44,12 +44,12 @@ int main(){
     Dog d2("Preeti",5);                                  
     // cout<< d2.getAge()<<endl;
 
-    Dog d3 = d2;                               //Unlike java, c++ has default copy constructor
+    Dog d3(d2);                               //Unlike java, c++ has default copy constructor. can lead to dangling pointer.
     cout<<"\n"<<d3.getName()<<"\t"<<d3.getAge()<<endl;
 
     delete d1;
     
-   return 0;
+    return 0;
 }
 
 // C++ vs Java. 

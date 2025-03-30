@@ -14,8 +14,8 @@ int main(){
     // v.front();
     // v.back();
     // v.capacity();
-    // v.erase(v.begin(), v.begin()+2);  //erase first two elements
-    // v.clear();               //v.erase(v.begin(),v.end())
+    // v.erase(v.begin(), v.begin()+2);    //erase first two elements
+    // v.clear();                          //v.erase(v.begin(),v.end())
 
     // vector<int> v1(v) //copy constructor
 
@@ -39,6 +39,8 @@ int main(){
     vector<int> v2(2,100);   
     v2.insert(v2.begin(), 30);
     v2.insert(v2.end(), v.begin(), v.end());
+
+    v2.erase(unique(v2.begin(), v2.end()), v2.end());  //remove duplicates
     
     sort(v2.begin(), v2.end(), greater<>());
     reverse(v2.begin(),v2.end());
@@ -47,10 +49,10 @@ int main(){
         cout<<it<< " ";
         
     cout<<endl;
-    cout<<*max_element(v2.begin(), v2.end())<<endl;
-    cout<<*lower_bound(v2.begin(), v2.end(), 4)<<endl;
+    cout<<*max_element(v2.begin(), v2.end())<<endl;    //maximum element
+    cout<<*lower_bound(v2.begin(), v2.end(), 4)<<endl;    //lower bound
 
-    if( binary_search(v.begin(), v.end(), 4) ){
+    if( binary_search(v.begin(), v.end(), 4) ){        //binary search
        auto lb = lower_bound(v2.begin(), v2.end(), 4);
        cout<<"found element at index "<<lb-v2.begin()<<endl;
     }
