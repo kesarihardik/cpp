@@ -10,12 +10,12 @@ union Number{
 
 int main(){
     Number x ;
-    cout<<sizeof(x)<<endl;  //union allocates size corresponding to largest member.
+    cout<<"size of "<<sizeof(x)<<endl;  //union allocates size corresponding to largest member.
 
-    x.shortVal = 2;
+    x.intVal = 2;
     x.doubleVal = 2.44;         //since values share memory, other values are overwritten on changing one.
-    cout<<x.doubleVal<<endl;
-    cout<<x.intVal<<endl;
+    cout<<"double val address: "<<&(x.doubleVal)<<",val: "<<x.doubleVal<<endl;
+    cout<<"int val address: "<<&(x.intVal) <<",val: "<<x.intVal<<endl;
 
     return 0;
 }

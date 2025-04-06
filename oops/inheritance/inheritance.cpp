@@ -22,7 +22,7 @@ class Shape{
      }
 };
 
-class Square: public Shape{                  //single - level inheritance . shape -> square
+class Square: public Shape{                  //single - level inheritance
     double side;
 
     public:      
@@ -31,7 +31,7 @@ class Square: public Shape{                  //single - level inheritance . shap
         this->side = side;
        }
 
-      double area(){
+      double area(){                   // this doesn't override but hides Shape::area because area() is a non-virtual method.
         return (this->side * this->side);
       }
 };

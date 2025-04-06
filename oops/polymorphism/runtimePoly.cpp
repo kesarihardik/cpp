@@ -1,21 +1,16 @@
 #include<iostream>
 using namespace std;
+/*
+c++ uses static dispatch(resolves method at compile time)
+Dynamic dispatch in c++ is implemented using vptr and vtable.
+every concrete class inherited from a class containing virtual func has its own vptr and vtable.
 
-//virtual function ensures that correct function is called. It is accessed only through pointers.
-//helps to avoid diamond problem.
-//can be accessed through pointers. can be friends.
-//needs to be defined in base class. redefining optional.
-
-//c++ uses static dispatch(resolves method at compile time)
-//In Java , all instance methods are virtual by default. Java uses dynamic dispatch.
-
-//assuming fun is present in both Parent & child
-//Parent P = new Child();    P.fun();         ///java will call fun of child class.
-//Parent* P = new Child() ;  P.fun();           //c++ will invoke parent class fun
+virtual enables dynamic polymorphism in c++. derived classes can override these functions.
+*/
 
 class Feline{
     public:
-     virtual void eat(){
+      virtual void eat(){       //virtual function
         cout<<"I'm eating generic food."<<endl;
       }
 
